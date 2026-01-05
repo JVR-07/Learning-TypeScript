@@ -1,0 +1,23 @@
+{
+  "name": "learning-typescript",
+  "version": "1.0.0",
+  "description": "Welcome to my TypeScript learning repository! Here, I document my progress, notes, and practice code as I master TypeScript.",
+  "homepage": "https://github.com/JVR-07/Learning-TypeScript#readme",
+  "bugs": {
+    "url": "https://github.com/JVR-07/Learning-TypeScript/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JVR-07/Learning-TypeScript.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
