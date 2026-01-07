@@ -1,0 +1,185 @@
+body {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding-top: 50px;
+}
+
+.layout-container {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.nav-title {
+  font-weight: 700;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav-btn {
+  text-decoration: none;
+  color: var(--ts-blue);
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background: rgba(49, 120, 198, 0.1);
+  transition: all 0.2s ease;
+  gap: 8px;
+}
+
+.nav-btn:hover {
+  background: var(--ts-blue);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.project-container {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 4rem;
+}
+
+.validator-card {
+  width: 100%;
+  max-width: 480px;
+  padding: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.card-header h2 {
+  font-size: 1.8rem;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+#password-input {
+  width: 100%;
+  background: #0f1115;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  font-size: 1.1rem;
+  color: var(--text-main);
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+#password-input:focus {
+  border-color: var(--ts-blue);
+}
+
+.eye-btn {
+  position: absolute;
+  right: 10px;
+  top: 40%;
+  transform: translateY(-20%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #8b949e;
+  font-size: 1.2rem;
+  padding: 0;
+}
+
+.eye-btn:hover {
+  color: #58a6ff;
+}
+
+.rules-section h3 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.rules-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.rule-item {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.rule-item .icon {
+  font-weight: bold;
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+}
+
+.rule-item.valid {
+  color: var(--easy-color);
+  font-weight: 500;
+}
+
+.rule-item.invalid {
+  color: var(--hard-color);
+}
+
+.success-message {
+  margin-top: 2rem;
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--easy-color);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid var(--easy-color);
+  animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.success-message.hidden {
+  display: none;
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
