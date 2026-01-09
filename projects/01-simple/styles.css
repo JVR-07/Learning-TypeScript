@@ -13,41 +13,6 @@ body {
   gap: 2rem;
 }
 
-.top-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.nav-title {
-  font-weight: 700;
-  color: var(--text-muted);
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.nav-btn {
-  text-decoration: none;
-  color: var(--ts-blue);
-  font-weight: 600;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  background: rgba(49, 120, 198, 0.1);
-  transition: all 0.2s ease;
-  gap: 8px;
-}
-
-.nav-btn:hover {
-  background: var(--ts-blue);
-  color: white;
-  transform: translateY(-2px);
-}
-
 .project-container {
   flex-grow: 1;
   display: flex;
