@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02 - Task Manager | Learning TS</title>
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script
+      type="module"
+      src="../../dist/02-intermediate/app.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <div class="layout-container">
+      <nav class="top-nav">
+        <a href="../../index.html" class="nav-btn">
+          <i class="ph ph-house"></i> Home
+        </a>
+        <div class="nav-title">Módulo 02: INTERMEDIATE</div>
+        <a href="../03-advanced/index.html" class="nav-btn">
+          Siguiente <i class="ph ph-arrow-right"></i>
+        </a>
+      </nav>
+
+      <div class="project-container">
+        <section class="input-section">
+          <div class="card task-input-card">
+            <h2>Nueva Tarea</h2>
+            <form id="task-form" class="task-form">
+              <div class="input-group-row">
+                <input
+                  type="text"
+                  id="task-input"
+                  placeholder="Ej: Terminar la documentación..."
+                  autocomplete="off"
+                />
+
+                <div class="date-wrapper">
+                  <input type="date" id="task-date" />
+                  <button
+                    type="button"
+                    class="icon-btn date-trigger"
+                    title="Definir Fecha"
+                  >
+                    <i class="ph ph-calendar-plus"></i>
+                  </button>
+                </div>
+
+                <button type="submit" class="create-btn">
+                  <i class="ph ph-plus"></i>
+                  <span class="btn-text">Crear</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <section class="feed-section">
+          <header class="feed-header">
+            <h3>Mis Tareas</h3>
+            <span class="task-count" id="task-count">0 pendientes</span>
+          </header>
+
+          <div id="task-list" class="task-list">
+            <div class="empty-state">
+              <i class="ph ph-clipboard-text"></i>
+              <p>No tienes tareas pendientes. ¡Agrega una arriba!</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
