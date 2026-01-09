@@ -1,3 +1,7 @@
+> # Work In Progress ⚠️
+>
+> # No page available yet... Coming soon 🔜
+
 # TypeScript Learning Journey 🚀
 
 Welcome to my TypeScript learning repository! Here, I document my progress, notes, and practice code as I master TypeScript.
