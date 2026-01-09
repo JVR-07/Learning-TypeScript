@@ -149,3 +149,44 @@ footer {
     font-size: 2.5rem;
   }
 }
+
+/* --- Global Navigation Bar --- */
+.top-nav {
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: center;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.nav-title {
+  font-weight: 700;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.nav-btn {
+  max-width: 7rem;
+  text-decoration: none;
+  color: var(--ts-blue);
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background: rgba(49, 120, 198, 0.1);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.nav-btn:hover {
+  background: var(--ts-blue);
+  color: white;
+  transform: translateY(-2px);
+}
