@@ -247,3 +247,27 @@ body {
 .empty-state i {
   font-size: 3rem;
 }
+
+
+.form-error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--hard-color);
+  background: rgba(239, 68, 68, 0.1);
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 12px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  animation: fadeIn 0.3s ease;
+}
+
+.form-error.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
