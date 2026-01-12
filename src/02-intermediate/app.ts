@@ -8,6 +8,7 @@ const taskListContainer = document.getElementById("task-list") as HTMLElement;
 const taskCountSpan = document.getElementById("task-count") as HTMLElement;
 const dateDisplay = document.getElementById("date-display") as HTMLElement;
 const datePickerContainer = document.getElementById("date-container") as HTMLElement;
+const formError = document.getElementById("form-error") as HTMLElement;
 
 let tasks: ITask[] = [];
 
@@ -77,10 +78,15 @@ datePickerContainer.addEventListener("click", () => {
 taskForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  if (!taskInput.value.trim() || !taskDate.value) {
-    alert("Por favor, completa el nombre y la fecha.");
+  const name = taskInput.value.trim();
+  const dateValue = taskDate.value;
+
+  if (!name || !dateValue) {
+    formError.classList.remove("hidden");
     return;
   }
+
+  formError.classList.add("hidden");
 
   tasks = addTask(tasks, {
     name: taskInput.value,
@@ -91,6 +97,8 @@ taskForm.addEventListener("submit", (e) => {
   });
 
   taskForm.reset();
+  dateDisplay.innerText = "Fecha";
+  dateDisplay.style.color = "inherit";
   renderTasks();
 });
 
