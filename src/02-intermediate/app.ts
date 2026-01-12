@@ -7,6 +7,7 @@ const taskDate = document.getElementById("task-date") as HTMLInputElement;
 const taskListContainer = document.getElementById("task-list") as HTMLElement;
 const taskCountSpan = document.getElementById("task-count") as HTMLElement;
 const dateDisplay = document.getElementById("date-display") as HTMLElement;
+const datePickerContainer = document.getElementById("date-container") as HTMLElement;
 
 let tasks: ITask[] = [];
 
@@ -63,6 +64,15 @@ const renderTasks = () => {
   const pendingCount = tasks.filter((t) => t.status !== "Terminada").length;
   taskCountSpan.innerText = `${pendingCount} pendientes`;
 };
+
+datePickerContainer.addEventListener("click", () => {
+  try {
+    taskDate.showPicker();
+  } catch (error) {
+    taskDate.focus();
+    taskDate.click();
+  }
+});
 
 taskForm.addEventListener("submit", (e) => {
   e.preventDefault();
