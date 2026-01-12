@@ -6,6 +6,7 @@ const taskInput = document.getElementById("task-input") as HTMLInputElement;
 const taskDate = document.getElementById("task-date") as HTMLInputElement;
 const taskListContainer = document.getElementById("task-list") as HTMLElement;
 const taskCountSpan = document.getElementById("task-count") as HTMLElement;
+const dateDisplay = document.getElementById("date-display") as HTMLElement;
 
 let tasks: ITask[] = [];
 
@@ -81,6 +82,17 @@ taskForm.addEventListener("submit", (e) => {
 
   taskForm.reset();
   renderTasks();
+});
+
+taskDate.addEventListener("change", () => {
+  if (taskDate.value) {
+    const dateObj = new Date(taskDate.value);
+    dateDisplay.innerText = dateObj.toLocaleDateString();
+    dateDisplay.style.color = "var(--ts-blue)";
+  } else {
+    dateDisplay.innerText = "Fecha";
+    dateDisplay.style.color = "inherit";
+  }
 });
 
 // Global functions
