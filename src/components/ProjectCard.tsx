@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 interface ProjectCardProps {
   title: string;
   description: string;
@@ -26,9 +28,9 @@ export const ProjectCard = ({
         <h3>{title}</h3>
       </div>
       <p className="card-desc">{description}</p>
-      <a href={link} className="btn">
+      <Link to={link} className="btn">
         Ver Proyecto &#10140;
-      </a>
+      </Link>
     </article>
   );
 };
