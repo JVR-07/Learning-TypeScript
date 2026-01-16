@@ -153,3 +153,13 @@ body {
     transform: scale(1);
   }
 }
+
+@media (max-width: 768px) {
+  .validator-card {
+    padding: 1.5rem;
+  }
+  
+  .card-header h2 {
+    font-size: 1.4rem;
+  }
+}
