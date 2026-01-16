@@ -159,6 +159,7 @@ footer {
   align-self: center;
   width: 100%;
   margin-bottom: 4rem;
+  padding: 0 1rem;
 }
 
 .nav-title {
@@ -189,4 +190,30 @@ footer {
   background: var(--ts-blue);
   color: white;
   transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 4rem 0 2rem;
+  }
+  .projects-section {
+    padding: 2rem 0 4rem;
+  }
+  .subtitle {
+    font-size: 0.9rem;
+  }
+  .top-nav {
+    margin-bottom: 2rem;
+    padding: 0rem;
+    } 
+  .nav-title {
+    font-size: 0.75rem;
+  }
+  .nav-btn {
+    padding: 0.4rem 0.7rem;
+    font-size: 0.8rem;
+  }
+  .badge {
+    font-size: 0.75rem;
+  }
 }
