@@ -12,11 +12,11 @@ export const Home = () => {
       link: "/project-1",
     },
     {
-      title: "TO-DO Basic App",
+      title: "Task Manager",
       difficulty: "Intermedio" as const,
       description:
         "Gestor de tareas con tipado estructural, manipulación inmutable de arreglos y lógica de fechas.",
-      link: "/projects/02-intermediate/index.html",
+      link: "/project-2",
     },
     {
       title: "E-commerce Dashboard",
