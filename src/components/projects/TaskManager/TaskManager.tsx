@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import {
   Plus,
   Trash,
@@ -18,6 +18,18 @@ export const TaskManager = () => {
   const [taskName, setTaskName] = useState("");
   const [taskDate, setTaskDate] = useState("");
   const [error, setError] = useState(false);
+
+  const dateInputRef = useRef<HTMLInputElement>(null);
+
+  const handleOpenPicker = () => {
+    if (dateInputRef.current) {
+      try {
+        dateInputRef.current.showPicker();
+      } catch (error) {
+        dateInputRef.current.focus();
+      }
+    }
+  };
 
   const handleAddTask = (e: React.FormEvent) => {
     e.preventDefault();
@@ -86,9 +98,10 @@ export const TaskManager = () => {
                   onChange={(e) => setTaskName(e.target.value)}
                 />
 
-                <div className="date-wrapper" id="date-container">
+                <div className="date-wrapper" onClick={handleOpenPicker}>
                   <input
                     type="date"
+                    ref={dateInputRef}
                     id="task-date"
                     value={taskDate}
                     onChange={(e) => setTaskDate(e.target.value)}

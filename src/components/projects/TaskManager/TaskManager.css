@@ -7,7 +7,7 @@ body {
 }
 
 .layout-container {
-  width: 100%;
+  width: 1000px;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -18,7 +18,6 @@ body {
   align-items: center;
   gap: 2rem;
   width: 100%;
-  padding: 0 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -287,6 +286,10 @@ body {
 }
 
 @media (max-width: 600px) {
+  .layout-container {
+    width: 100%;
+  }
+
   .input-group-row {
     flex-direction: column;
     gap: 12px;

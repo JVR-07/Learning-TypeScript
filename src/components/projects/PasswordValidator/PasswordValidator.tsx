@@ -29,14 +29,14 @@ export const PasswordValidator = () => {
   const isAllValid = Object.values(validations).every(Boolean);
 
   return (
-    <div className="layout-container">
+    <div className="layout-container-1">
       <ProjectNavbar
         moduleTitle="Módulo 01"
         badgeText="Fácil"
         badgeColor="easy"
         nextLink="/project-2"
       />
-      <div className="project-container">
+      <div className="project-container-1">
         <div className="card validator-card">
           <header className="card-header">
             <h2>Validador de Seguridad</h2>

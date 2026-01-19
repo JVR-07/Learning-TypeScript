@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, House } from "@phosphor-icons/react";
+import {
+  ArrowLeftIcon,
+  ArrowRightIcon,
+  HouseIcon,
+} from "@phosphor-icons/react";
 
 interface ProjectNavbarProps {
   moduleTitle: string;
@@ -19,20 +23,27 @@ export const ProjectNavbar = ({
   return (
     <nav className="top-nav">
       <Link to={prevLink} className="nav-btn">
-        {prevLink === "/" ? <House size={18} /> : <ArrowLeft size={18} />}
-        {prevLink === "/" ? " Home" : " Anterior"}
+        {prevLink === "/" ? (
+          <HouseIcon size={18} />
+        ) : (
+          <ArrowLeftIcon size={18} />
+        )}
+        <span>{prevLink === "/" ? " Home" : " Anterior"}</span>
       </Link>
 
       <div className="nav-title">
-        {moduleTitle}:<span className={`badge ${badgeColor}`}>{badgeText}</span>
+        <span>{moduleTitle}:</span>
+        <span className={`badge ${badgeColor}`}>{badgeText}</span>
       </div>
 
       {nextLink ? (
         <Link to={nextLink} className="nav-btn">
-          Siguiente <ArrowRight size={18} />
+          <span>Siguiente</span>
+          <ArrowRightIcon size={18} />
         </Link>
       ) : (
-        <div style={{ width: "80px" }}></div>
+        // Mantenemos el espaciador con el mismo ancho aproximado del botón para centrar el título
+        <div style={{ width: "100px" }}></div>
       )}
     </nav>
   );
