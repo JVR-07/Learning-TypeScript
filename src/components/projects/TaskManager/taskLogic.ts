@@ -15,7 +15,7 @@ export function getNextId(taskList: ITask[]): number {
  */
 export function addTask(
   taskList: ITask[],
-  newTaskData: Omit<ITask, "id">
+  newTaskData: Omit<ITask, "id">,
 ): ITask[] {
   const newTask: ITask = {
     id: getNextId(taskList),
@@ -31,7 +31,7 @@ export function addTask(
 export function updateTaskStatus(
   taskList: ITask[],
   taskId: number,
-  newStatus: TaskStatus
+  newStatus: TaskStatus,
 ): ITask[] {
   return taskList.map((task) => {
     if (task.id === taskId) {
